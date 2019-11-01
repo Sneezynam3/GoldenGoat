@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
 var NewsSchema = new Schema({
-    Headline: {
+    title: {
         type: String,
         required: true,
         unique: true
@@ -12,7 +12,7 @@ var NewsSchema = new Schema({
         type: String
     },
 
-    URL: {
+    link: {
         type: String,
         unique: true
     },
