@@ -22,6 +22,8 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/GoldenGoat";
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
+
+
 //===================================================
 require("./routes/routes")(app);
 
@@ -64,12 +66,6 @@ app.get("/scrape", function(req, res){
     })
     res.send("Scrape complete");
 });
-
-
-
-
-
-
 
 
 app.listen(PORT, function(){
